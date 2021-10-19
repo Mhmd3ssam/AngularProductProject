@@ -1,0 +1,13 @@
+
+<div class="">
+  <div class="card" style="width: 18rem;" *ngFor="let item of Product">
+    <img class="card-img-top" [src]="item.image" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">{{item.title}}</h5>
+      <p class="card-text">{{item.description}}</p>
+      <p class="card-text"> price : {{item.price |  currency:'USD'}}</p>
+      <p class="card-text"> Count  | {{item.rating.count_in_stock | myPipe }}</p>
+      <a href="#" class="btn btn-primary">By it </a>
+    </div>
+  </div>
+</div>
